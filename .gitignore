@@ -2,4 +2,4 @@ EA_Game/bin/*
 EA_Game/include/*
 EA_Game/lib/*
 EA_Game/pip-selfcheck.json
-__pycache__/*
+__pycache__/
