@@ -28,7 +28,7 @@ class Plane():
 
   def finish_detect(self):
     if((self.player.x-self.destination_x)**2+(self.player.y-self.destination_y)**2<100):
-      quit()
+      exit()
     return False  
 
 if __name__ == "__main__":
