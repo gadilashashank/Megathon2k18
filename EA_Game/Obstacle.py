@@ -9,6 +9,10 @@ class Obstacle():
     def __init__(self,screen,length,breadth,x,y,color):
         self.color = color
         self.screen=screen
+        self.x=x
+        self.y=y
+        self.length=length
+        self.breadth=breadth
         self.dimensions = [x,y,length,breadth]
 
     def render_obstacle(self):
@@ -26,7 +30,7 @@ if __name__ == "__main__":
                 if i.unicode=='q':
                     exit()
 
-        a = Obstacle(screen,100,500,100,50,black)
+        a = Obstacle(screen,100,50,100,50,black)
         screen.fill(white)
         a.render_obstacle()
         pygame.display.flip()

@@ -16,7 +16,12 @@ class Plane():
     for obstacle in self._obstacles:
       obstacle.render_obstacle()
 
-
+  def collision_detect(self):
+    for obstacle in self._obstacles:
+      if(self.player.x > obstacle.x - obstacle.length and self.player.x+self.player.length<obstacle.x+obstacle.length and self.player.y>obstacle.y-obstacle.breadth and
+       self.player.y+self.player.length<obstacle.y+obstacle.breadth):
+        self.player.x=self.player.prev_x
+        self.player.y=self.player.prev_y
 
 if __name__ == "__main__":
     init()

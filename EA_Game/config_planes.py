@@ -7,7 +7,7 @@ player_color = blue
 
 #Size of the screen
 x_size=1000
-y_size=1000
+y_size=600
 screen_x = x_size
 screen_y = y_size
 screen_background = white
