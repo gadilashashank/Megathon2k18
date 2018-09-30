@@ -13,11 +13,13 @@ class Plane():
         self.player = player
         self.destination_x = final_coods[0]
         self.destination_y = final_coods[1]
+        self.keyTaken=False
 
     def render_function(self):
         self.screen.fill(self.color)
         for obstacle in self._obstacles:
             obstacle.render_obstacle()
+        if(not self.keyTaken):
             draw.circle(self.screen, gold, (self.destination_x,
                                             self.destination_y), 10)
 
@@ -31,9 +33,11 @@ class Plane():
                     return True
 
     def finish_detect(self):
-        if((self.player.x-self.destination_x)**2+(self.player.y-self.destination_y)**2<100):
-            exit()
-            return False
+        if((self.player.x-self.destination_x)**2+(self.player.y-self.destination_y)**2<100) and not self.keyTaken:
+            self.keyTaken=True
+            return 1
+        else:
+            return 0
 
 
 if __name__ == "__main__":

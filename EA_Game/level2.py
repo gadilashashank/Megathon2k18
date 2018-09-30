@@ -10,10 +10,11 @@ screen = pygame.display.set_mode(size)
 player1 = Player(10, y_size - 10, screen, 10, 10)
 x_change = 0
 y_change = 0
+keysTaken=0
 
 plane1 = Plane(white, screen, player1, (590, 10))
-plane2 = Plane(white, screen, player1, (590, 10))
-plane3 = Plane(white, screen, player1, (590, 10))
+plane2 = Plane(white, screen, player1, (10, 10))
+plane3 = Plane(white, screen, player1, (300, 300))
 
 plane1._obstacles.append(Obstacle(screen, 5*int(x_size/6), 10, 0,
                          2*int(y_size/3), black))
@@ -95,7 +96,9 @@ while 1:
     player1.move("y", y_change)
     player1.move("x", x_change)
     planes[planeNumber].collision_detect()
-    planes[planeNumber].finish_detect()
+    keysTaken+=planes[planeNumber].finish_detect()
     player1.draw_player()
     pygame.display.flip()
     pygame.display.update()
+    if(keysTaken==3):
+      exit()
