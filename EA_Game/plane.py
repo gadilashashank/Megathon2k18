@@ -50,7 +50,7 @@ if __name__ == "__main__":
                                       plane1.y_/2, black))
     while not gameExit:
         for i in event.get():
-            print(i)
+            # print(i)
             if i.type == QUIT:
                 gameExit = True
                 if i.type == KEYDOWN:

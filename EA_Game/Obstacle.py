@@ -25,7 +25,7 @@ if __name__ == "__main__":
     pygame.display.set_caption("Example code for the draw module")
     while 1:
         for i in pygame.event.get():
-            print(i)
+            # print(i)
             if i.type == pygame.KEYDOWN:
                 if i.unicode == 'q':
                     exit()

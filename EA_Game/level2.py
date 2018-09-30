@@ -68,7 +68,7 @@ planes = [plane1, plane2, plane3]
 planeNumber = 0
 while 1:
     for i in pygame.event.get():
-        print(i)
+        # print(i)
         if i.type == pygame.KEYDOWN:
             if i.unicode == 'q':
                 exit()

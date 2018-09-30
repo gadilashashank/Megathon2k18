@@ -42,7 +42,7 @@ if __name__ == "__main__":
     y_change = 0
     while 1:
         for i in pygame.event.get():
-            print(i)
+            # print(i)
             if i.type == pygame.KEYDOWN:
                 if i.unicode == 'q':
                     exit()
