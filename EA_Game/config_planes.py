@@ -4,6 +4,8 @@ black = (0, 0, 0)
 white = (255, 255, 255)
 blue = (0, 0, 255)
 gold = (255, 223, 0)
+color1=(244, 191, 66)
+orange=(244, 140, 65)
 player_color = blue
 font.init()
 
