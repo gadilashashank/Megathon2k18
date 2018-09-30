@@ -3,34 +3,34 @@ from config_planes import *
 pygame.init()
 
 
-
 class Obstacle():
     '''This class renders obstacles'''
-    def __init__(self,screen,length,breadth,x,y,color):
+    def __init__(self, screen, length, breadth, x, y, color):
         self.color = color
-        self.screen=screen
-        self.x=x
-        self.y=y
-        self.length=length
-        self.breadth=breadth
-        self.dimensions = [x,y,length,breadth]
+        self.screen = screen
+        self.x = x
+        self.y = y
+        self.length = length
+        self.breadth = breadth
+        self.dimensions = [x, y, length, breadth]
 
     def render_obstacle(self):
-        pygame.draw.rect(self.screen,self.color,Rect(*self.dimensions))
+        pygame.draw.rect(self.screen, self.color, Rect(*self.dimensions))
+
 
 if __name__ == "__main__":
-    size = [x_size,y_size]
+    size = [x_size, y_size]
     screen = pygame.display.set_mode(size)
 
     pygame.display.set_caption("Example code for the draw module")
     while 1:
         for i in pygame.event.get():
             print(i)
-            if i.type==pygame.KEYDOWN:
-                if i.unicode=='q':
+            if i.type == pygame.KEYDOWN:
+                if i.unicode == 'q':
                     exit()
 
-        a = Obstacle(screen,100,50,100,50,black)
+        a = Obstacle(screen, 100, 50, 100, 50, black)
         screen.fill(white)
         a.render_obstacle()
         pygame.display.flip()
