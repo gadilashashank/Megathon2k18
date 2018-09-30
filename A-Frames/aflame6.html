@@ -1,0 +1,58 @@
+<html>
+    <head>
+            <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+            <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>    
+            <script src="./universe_transition.js"></script>
+    </head>
+
+    <body>
+        <a-scene>
+            <a-entity id="env" environment="preset: tron; dressingAmount:0" light="type: ambient;intensity:0.4"></a-entity>
+            <a-entity>
+                <a-box position="0 1 -15" scale="30 2 2"></a-box>
+                <a-box position="0 1 15" scale="30 2 2"></a-box>
+                <a-box position="-15 1 0" scale="2 2 30"></a-box>
+                <a-box position="15 1 0" scale="2 2 30"></a-box>
+            </a-entity>
+            <a-entity id="centity" rotation="0 0 0"><a-camera id="camera" position="0 10 30" rotation="0 0 0" scale=" 1 1 1" spectator="false"></a-camera>
+            </a-entity>
+            <a-entity id="world1" visible="false" position="-14 1 -14">
+                <a-box position="1 0 10" scale="2 2 20"></a-box>
+                <a-box position="19 0 0" scale="8 2 2"></a-box>
+                <a-box position="22 0 3" scale="2 2 4"></a-box>
+                <a-box position="25 0 6" scale="8 2 2"></a-box>
+                <a-box position="6 0 24" scale="2 2 8"></a-box>
+                <a-box position="10 0 20" scale="10 2 2"></a-box>
+                <a-box position="14 0 25" scale="14 2 2"></a-box>
+                <a-box position="8 0 10" scale="2 2 8"></a-box>
+                <a-box position="14 0 14" scale="8 2 2"></a-box>
+            </a-entity>
+            <a-entity id="world2" visible="false" position="-14 1 -14">
+                <a-box position="22 0 6" scale="12 2 2"></a-box>
+                <a-box position="14 0 14" scale="28 2 2"></a-box>
+                <a-box position="14 0 20" scale="2 2 12"></a-box>
+            </a-entity>
+            <a-entity id="world3" visible="true" position="-14 1 -14">
+                    <a-box position="8 0 4" scale="12 2 2"></a-box>
+                    <a-box position=" 12 0 12" scale="2 2 8"></a-box>
+                    <a-box position="12 -0.5 20" scale="2 1 8"></a-box>
+                    <a-box position="14 0 20" scale="2 2 8"></a-box>
+                    <a-box position="16 0.5 20" scale="2 3 8"></a-box>
+                    <a-box position="20 1 20" scale="6 4 8"></a-box>
+                    <a-box position="20 2 14" scale="6 2 4"></a-box>
+                    <a-box position="12 2 14" scale="10 2 2"></a-box>
+                    <a-box position="10 3 10" scale="4 2 6"></a-box>
+                    <a-box position="14 4 10" scale="4 2 6"></a-box>
+                    <a-box position="18 5 10" scale="4 2 6"></a-box>
+                    <a-box position="22 6 10" scale="4 2 6"></a-box>
+                    <a-box position="14 0 4" scale="2 2 8"></a-box>
+                    <a-box position="26 0 24" scale="6 2 2"></a-box>
+                    <a-box position="" scale=""></a-box>
+            </a-entity>
+            <a-box rotation="0 45 45" color="gold" metalness="0.5" position="12 2 -12 ">
+                <a-animation attribute="position" to="12 6 -12" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+            </a-box>
+            <a-ring id="player" position="-12 1 12" color="teal" radius-inner="0.5" radius-outer="1" ></a-ring>
+        </a-scene>
+    </body>
+</html>
