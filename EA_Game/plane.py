@@ -20,14 +20,14 @@ class Plane():
         for obstacle in self._obstacles:
             obstacle.render_obstacle()
         if(not self.keyTaken):
-            draw.circle(self.screen, gold, (self.destination_x,
+            draw.circle(self.screen, red, (self.destination_x,
                                             self.destination_y), 10)
 
     def collision_detect(self):
         for obstacle in self._obstacles:
-            if(self.player.x in range(obstacle.x, obstacle.x + obstacle.length)
-               and self.player.y in range(obstacle.y,
-                                          obstacle.y + obstacle.breadth)):
+            if(self.player.x in range(obstacle.x - 10, obstacle.x + obstacle.length + 1)
+               and self.player.y in range(obstacle.y - 10,
+                                          obstacle.y + obstacle.breadth + 1)):
                     self.player.x = self.player.prev_x
                     self.player.y = self.player.prev_y
                     return True

@@ -14,7 +14,7 @@ keysTaken=0
 
 plane1 = Plane(white, screen, player1, (590, 10))
 plane2 = Plane(color1, screen, player1, (10, 10))
-plane3 = Plane(orange, screen, player1, (300, 300))
+plane3 = Plane(orange, screen, player1, (300, 290))
 
 plane1._obstacles.append(Obstacle(screen, 5*int(x_size/6), 10, 0,
                          2*int(y_size/3), black))
